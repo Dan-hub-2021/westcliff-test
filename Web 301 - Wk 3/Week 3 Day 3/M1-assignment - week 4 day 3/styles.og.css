@@ -1,0 +1,232 @@
+ /* Header */
+ header {
+    width: 100%;
+    min-height: 400px;
+    padding-top: 3em;
+}
+#home header {
+    background: no-repeat lightgrey url(images/Audi_Ev.jpg);
+    background-size: 500px;
+}
+.main-header {
+    background-color:rgb(255, 255, 255, 0.8);
+    width: 700px;
+    margin: 2em auto 0 auto;
+    min-height: 100px;
+    height: 100px;
+}
+.main-header .logo img {
+    width: 100px;
+    height: 100px;
+    margin: 0 2em 0 0;
+    float: left;
+}
+
+/* Navigation */
+.main-menu {
+    margin-left: 227px;
+    font-weight: 400;
+}
+.main-menu ul li {
+    list-style-type: none;
+    display: inline-block;
+    float: left;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-left: 1px solid rgba(202, 204, 202, 0.6);
+    line-height: 100px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.main-menu ul li a {
+    text-decoration: none;
+    color:#888;
+}
+.main-menu ul li a:hover {
+    color: #347dd0;
+}
+.main-menu ul li.active {
+    background: #347dd0;
+    border: none;
+}
+.main-menu ul li.active a {
+    color: #fff;
+}
+
+/* Main */
+main .logo{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    color: #347dd0;
+}
+
+main h2 {
+    color: #347dd0;
+    Margin: 50px 0 0 100px;
+}
+main h3{
+    Margin: 50px 0 0 100px;
+}
+main p{
+    Margin: 25px 0 50px 100px;
+
+}
+/* activities*/
+table {
+    width: 1000px;
+    margin: 4em auto 0 auto;
+}
+caption {
+    background: #23659b;
+    height: 40px;
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding-top: 1em;
+}
+thead {
+    background: #BDE1FF;
+}
+tbody {
+    background: #d7d8e4;
+    text-align: center;
+}
+th, td {
+    width: 225px;
+    height: 75px;
+    vertical-align: middle;
+    border: solid 1px #852B1B;
+}
+tfoot{
+    background: #d7d8e4;
+    text-align: center;
+}
+th:first-child {
+    width: 125px;
+    height: 50px;
+    background: #23659b;
+    color: rgb(10, 0, 0);
+}
+td:first-child {
+    font-weight: bold;
+    background: #23659b;
+}
+/* Footer */
+footer {
+    height: 150px;
+    padding-bottom: 1em;
+    background-color: #ecfab8;
+    width: 100%;
+    margin:34em auto;
+    clear: both;
+}
+footer #nondisclaimer .copy {
+    padding: 3.5em 3.5em 3.5em 13em;
+    float: left;
+    font-size: 0.9em;
+}
+footer #nondisclaimer .social {
+    padding: 2.5em;
+    margin-right: 9.25em;
+    float: right;
+}
+footer #disclaimer {
+    clear: both;
+}
+footer #disclaimer p {
+    font-size: 0.85em;
+    text-align: center;
+}
+footer #nondisclaimer .social .fa {
+    padding: 15px;
+    font-size: 15px;
+    width: 15px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 4px;
+    border-radius: 50%;
+}
+footer #nondisclaimer .social .fa:hover {
+    opacity: 0.7;
+}
+footer #nondisclaimer .social .fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+footer #nondisclaimer .social .fa-twitter{
+    background: #55ACEE;
+    color: white;
+}
+footer #nondisclaimer .social .fa-instagram{
+    background: #125688;
+    color: white;
+}
+
+
+
+input[type=text] {
+    border: 2px solid blue;
+    border-radius: 4px;
+  }
+  input[type=email] {
+    border: 2px solid blue;
+    border-radius: 4px;
+  }
+
+  /* gallery*/
+
+  #EVcars {
+    list-style-type: none;
+}
+
+#EVcars {
+    list-style-type: none;
+}
+
+#EVcars li{
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    float: left;
+    margin-right: 30px;
+}
+
+#EVcars li img{
+    width: 300px;
+    height: 150px;
+}
+
+#EVcars li .description {
+    visibility: hidden;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.75);
+}
+
+#EVcars li .caption {
+    text-align: center;
+}
+
+#EVcars li:hover {
+    cursor: pointer;
+}
+
+#EVcars li:hover .description {
+    visibility: visible;
+}
+
+main #infoBox {
+    background-color: rgba(108, 154, 238, 0.9);
+    color: rgba(6, 4, 29, 0.75);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1em;
+    position: absolute;
+    width: 20%;
+    height: 100px;
+    float: right;
+    border-radius: 1em;
+}

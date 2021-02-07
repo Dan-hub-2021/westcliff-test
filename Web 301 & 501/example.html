@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+<meta charset="UTF-8">
+
+<title>Calculator</title>
+
+<meta name="description" content="A Javascript Calculator" />
+<meta name="keywords" content="calculator, JavaScript, eval, try/catch,
+   exception, errors" />
+<meta name="author" content="Cory Coleman" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" type="image/png" href="../calculator/star.png">
+<link href="style.css" rel="stylesheet" />
+
+<script src="calculator.js"></script>
+</head>
+
+<body class="calculator">
+<header class="calculator">
+<h1>JS Calculator</h1>
+</header>
+
+<nav>
+<ul>
+   <li><a href="../index.html" target="_blank">Home</a></li>
+   <li><a href="../movies.html" target="_blank">My Movies</a></li>
+   <li><a href="../hobby.html" target="_blank">My Hobby</a></li>
+   <li class="dropnav"><a href="#">Other Pages</a>
+       <ul class="dropdown">
+           <li class="submenu"><a href="../animation.html" target="_blank">
+           Animation</a></li>
+           <li class="submenu"><a href="../youthshelter/youthshelter.html"
+           target="_blank">Youth Shelter</a></li>
+           <li class="submenu"><a href="../petcomp/petcomp.html" target="_blank">
+           Pet Competition Form</a></li>
+           <li class="submenu"><a href="../story/story.html" target="_blank">
+           Ad-lib Story</a></li>
+           <li class="submenu"><a href="slideshow.html" target="_blank">
+           Slideshow</a></li>
+           <li class="submenu"><a class="active" href="calculator.html"
+           target="_blank">JS Calculator</a></li>
+       </ul>
+   </li>  
+</ul>
+</nav>
+
+<body>
+<h1>JavaScript Calculator</h1>
+        <p><input type="text" id="compText" readonly></p> <!--'readonly' will keep the element secure and not accessible-->
+        <h3 id="message"></h3>
+               <button value="1" class="digit">1</button>
+        <button value="2" class="digit">2</button>
+               <button value="3" class="digit">3</button>
+        <button value="+" class="operator">+</button>
+        <br>
+        <button value="4" class="digit">4</button>
+               <button value="5" class="digit">5</button>
+               <button value="6" class="digit">6</button>
+        <button value="-" class="operator">-</button>
+        <br>
+        <button value="7" class="digit">7</button>
+               <button value="8" class="digit">8</button>
+               <button value="9" class="digit">9</button>
+        <button value="*" class="operator">X</button>
+        <br>
+        <button value="C" id="clearBtn">C</button>
+        <button value="0" class="digit">0</button>
+        <button type="button" id="convertBtn">=</button> <!-- = button -->
+        <button value="/" class="operator">/</button>
+               <br>
+               <button value="" class="operator">X<sup>2</sup></button>
+               <button value="" class="operator">1/2</button>
+               <button value="" class="operator">area</button>
+
+               <Script>
+
+               window.addEventListener("load", function() {
+  
+                document.getElementById("convertBtn").addEventListener("click", convert);
+               
+                var numbers = document.getElementsByClassName("digit"); //will get all button values
+                var size = numbers.length; //gets length of array of numbers/button values
+               
+                for (var i = 0; i < size; i++) { //loops through and adds an event listener to each of the buttons
+                    numbers[i].addEventListener("click", buildFormula);
+                }
+               
+                document.getElementById("clearBtn").addEventListener("click", function() { //this will wire up the clear button to work when clicked on
+                    document.getElementById("compText").value = ""; //this will clear whatever value is in the text box
+                });
+               
+                var operators = document.getElementsByClassName("operator");
+                size = operators.length;
+               
+                for(var i = 0; i < size; i++) {
+                    operators[i].addEventListener("click", function() {
+                        document.getElementById("compText").value += " " + this.value + " ";
+                    })
+                }
+               
+                var buttons = document.getElementsByTagName("button"); //will pull for all buttons
+                size = buttons.length;
+               
+                for(var i = 0; i < size; i++) {
+                    buttons[i].addEventListener("focus", function() {
+                        this.style.border = "4px #333C7C solid";   //adds border to button when it is clicked
+                    })
+                    buttons[i].addEventListener("blur", function() {
+                        this.style.border = "4px #C2C6DF inset";   //brings border back to normal when another button is clicked
+                    })
+                    buttons[i].addEventListener("mouseover", function() {
+                        this.style.backgroundColor = "#A89BBD";    //changes color when hovered over by mouse to show the button you are on
+                    })
+                    buttons[i].addEventListener("mouseout", function() {
+                        this.style.backgroundColor = "#D0C8DE";    //changes back to original color when mouse cursor is no longer hovering over the button
+                    })
+                }
+               
+             });
+               
+             function convert() {   //this function will convert the values entered into the text box
+               
+                try {
+                    var calculate = eval(document.getElementById("compText").value); //eval will allow formulas to be put in and calculated
+                    var answer = calculate;
+                    document.getElementById("message").innerHTML = "the answer is " + answer.toFixed(2); //the .toFixed(2) will only display the answer with decimal places
+                }
+                catch(error) {
+                    document.getElementById("message").innerHTML =
+                        "Could not do conversion. Please enter number or complete formula only.";
+                }
+             }
+             
+             function buildFormula() {   //this function will allow the numbered buttons to enter in the value as they are clicked
+                document.getElementById("compText").value += this.value;   //.value will work on a text box, not .innerHTML
+             }
+            </Script>
+
+</body>
+
+</html>

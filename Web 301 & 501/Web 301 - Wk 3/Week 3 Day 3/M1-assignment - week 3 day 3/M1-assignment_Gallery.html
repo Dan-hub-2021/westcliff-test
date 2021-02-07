@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>gallery</title>
+            <meta charset="utf-8">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="styles.og.css">
+    </head>
+    <body id="activities"><!-- Container to wrap everything -->
+        <div id="container">
+            <header>
+                <img src="images/Audi Ev.jpg" alt="Audi Ev" Width="350" height="275">
+                <img src="images/BMW Ev.jpg" alt="BMW Ev" Width="350" height="275">
+                <img src="images/Ford Focus Ev.jpg" alt="Ford Focus Ev" Width="350" height="275">
+                <img src="images/NIO ES6.jpg" alt="NIO ES6" Width="350" height="275">
+                <img src="images/Tesla Model S.jpg" alt="Tesla Model S" Width="350" height="275">
+                <div class="main-header">
+                    <div class="logo">
+                        <img src="images/electric car adapters.jpg" alt="electric car adapters" width="125">
+                        <nav class="main-menu"></nav>
+                
+                <main>
+                    <h1>Car Types</h1>
+                    <p>The many types of views</p>
+                   
+                    <section>
+                        <ul id="EVcars">
+                            <!--<li class="gallery">
+                                 <figcaption>Tesla Model 3</figcaption>
+                                <img src="images/photo1.jpg" alt="photo1">
+                            <description> driving along</description></li>
+                            <li class="gallery">
+                                 <figcaption>Tesla Truck</figcaption>
+                                 <img src="images/photo2.jpg" alt="photo2"></li>                    
+                            <li class="gallery">
+                                 <figcaption>Front Charging</figcaption>
+                                <img src="images/photo3.jpg" alt="photo3"></li>
+                            <li class="gallery">
+                                 <figcaption>Line of EVs</figcaption>
+                                 <img src="images/photo4.jpg" alt="photo4"></li>
+                            <li class="gallery">
+                                 <figcaption>Solar Top</figcaption>
+                                <img src="images/photo5.jpg" alt="photo5"></li>
+                            <li class="gallery">
+                                 <figcaption>Sporty EV</figcaption>
+                                 <img src="images/photo6.jpg" alt="photo6"></li>
+                            <li class="gallery">
+                                 <figcaption>Mercedes EV Next Gen</figcaption>
+                                <img src="images/photo7.jpg" alt="photo7"></li>
+                            <li class="gallery">
+                                 <figcaption>Rear Charging</figcaption>
+                                 <img src="images/photo8.jpg" alt="photo8"></li>
+                            <li class="gallery">
+                                 <figcaption>Chargin Types</figcaption>
+                                <img src="images/photo9.jpg" alt="photo9"></li>
+                            <li class="gallery">
+                                 <figcaption>How they Work</figcaption>
+                                 <img src="images/photo10.jpg" alt="photo10"></li>  -->
+                        </ul>
+                    </section>
+                    
+
+                    <footer>
+                        <div id="nondisclaimer">
+                            <div class="copy">&copy; Copyright 2020 :: GreatCliffs.com</div>
+                            <div class="social">
+                                <a href="#" class="fa fa-facebook"></a>
+                                <a href="#" class="fa fa-instagram"></a>
+                                <a href="#" class="fa fa-twitter"></a>
+                            </div>
+                        </div>
+                        <div id="disclaimer">
+                            <p>This website is designed and created solely for educational purposes only at Westcliff University. All contents are not intended for any commercial gain or use.</p>
+                        </div>
+                    </footer>
+                 
+        </div><!-- End Container -->
+        <script>
+            var galleryImages = [];
+            var fileNames = [];
+            var imageList = [];
+            var image;
+            //var openList = "<li class='photo'>";
+            var openList;
+            var closeList = "</li>";
+
+            var openCaptionTag = "<p class='caption'>";
+            var closeCaptionTag = "</p>";
+
+            var openDescTag = "<p class = 'description'>";
+            var closeDescTag = "</p>";
+
+            var captionTexts = [];
+            captionTexts.push('Tesla Truck', 'How EV cars Work', 'Home Charging Kit', 'EV info','Rear Charging','Mercedes EV Prototype','Sporty EV','Solar Top','EV Roll','Front Chraging');
+
+            var descTexts = [];
+            descTexts.push('$100 deposit', 'Inner working', 'Must have', 'read me','differnet location', 'in the future','drving down the road', 'top up','its going to take awhile','alomost done');
+
+            for (var i=0; i<10; i++) {
+                fileNames.push("photo"+(i+1));
+                galleryImages.push("<img src='images/" + fileNames[i] + ".jpg'"+ "''>");
+                openList = "<li id='gallery" + (i+1) + "''>";
+                image = openList + openDescTag + descTexts[i] + closeDescTag + galleryImages[i] + openCaptionTag + captionTexts[i] + closeCaptionTag + closeList;
+                imageList.push(image);
+            }
+            document.getElementById("EVcars").innerHTML = imageList.join(" ");
+        </script>
+    </body>
+</html>
+
+
+
+

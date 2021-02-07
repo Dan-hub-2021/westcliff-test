@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gallery</title>
+            <meta charset="utf-8">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="styles.og.css">
+    </head>
+    <body id="activities"><!-- Container to wrap everything -->
+        <div id="container">
+            <header>
+                <img src="images/Audi Ev.jpg" alt="Audi Ev" Width="350" height="275">
+                <img src="images/BMW Ev.jpg" alt="BMW Ev" Width="350" height="275">
+                <img src="images/Ford Focus Ev.jpg" alt="Ford Focus Ev" Width="350" height="275">
+                <img src="images/NIO ES6.jpg" alt="NIO ES6" Width="350" height="275">
+                <img src="images/Tesla Model S.jpg" alt="Tesla Model S" Width="350" height="275">
+                <div class="main-header">
+                    <div class="logo">
+                        <img src="images/electric car adapters.jpg" alt="electric car adapters" width="125">
+                        <nav class="main-menu"></nav>
+                
+                <main>
+                    <h1>Car Types</h1>
+                    <p>The many types of views</p>
+                    <div id="showcase">
+                      <ul id="EVcars">
+                      </ul>                        
+
+                      <div id="infoBox" style="display:none">
+                        <div id="infoHeading"></div>
+                        <div id="infoText"></div>
+                        <div id="infoClose"></div>
+                      </div>
+                    </div>
+
+                    <section>
+                        <!--<ul id="EVcars">
+                          <li class="photo1">
+                            <img src="images/photo1.jpg">
+                            <br>
+                            <p class="caption">Tesla Truck</p>
+                            <div id="desc" class="description" >$100 deposit</div>
+                        </li>
+                        <li class="photo2">
+                            <img src="images/photo2.jpg">
+                            <br>
+                            <p class="caption">How EV Cars Work</p>
+                            <div id="desc" class="description">How EV cars Work</div>
+                        <li class="photo3">
+                            <img src="images/photo3.jpg">
+                            <br>
+                            <p class="caption">Home Charging Station</p>
+                            <div id="desc" class="description" >Home Charging Kit</div>
+                        <li class="photo">
+                            <img src="images/photo4.jpg">
+                            <br>
+                            <p class="caption">EV info</p>
+                            <div id="desc" class="description" >EV info</div>
+                        <li class="photo5">
+                            <img src="images/photo5.jpg">
+                            <br>
+                            <p class="caption">Rear Charing</p>
+                            <div id="desc" class="description" >Rear Charging</div>
+                        <li class="photo6">
+                            <img src="images/photo6.jpg">
+                            <br>
+                            <p class="caption">Mercedes EV Prototype</p>
+                            <div id="desc" class="description" >Mercedes EV Prototype</div>
+                        <li class="photo7">
+                            <img src="images/photo7.jpg">
+                            <br>
+                            <p class="caption">Sproty EV</p>
+                            <div id="desc" class="description" >Sporty EV</div>
+                        <li class="photo8">
+                            <img src="images/photo8.jpg">
+                            <br>
+                            <p class="caption">Solar Top</p>
+                            <div id="desc" class="description" >Solar Top</div>
+                        <li class="photo9">
+                            <img src="images/photo9.jpg">
+                            <br>
+                            <p class="caption">EV Roll</p>
+                            <div id="desc" class="description" >EV Roll</div>
+                        <li class="photo10">
+                            <img src="images/photo10.jpg">
+                            <br>
+                            <p class="caption">Front Charging</p>
+                            <div id="desc" class="description" >Front Chraging</div>
+                        </ul>  -->                      
+                    </section>                    
+
+                    <footer>
+                        <div id="nondisclaimer">
+                            <div class="copy">&copy; Copyright 2020 :: GreatCliffs.com</div>
+                            <div class="social">
+                                <a href="#" class="fa fa-facebook"></a>
+                                <a href="#" class="fa fa-instagram"></a>
+                                <a href="#" class="fa fa-twitter"></a>
+                            </div>
+                        </div>
+                        <div id="disclaimer">
+                            <p>This website is designed and created solely for educational purposes only at Westcliff University. All contents are not intended for any commercial gain or use.</p>
+                        </div>
+                    </footer>
+                 
+        </div><!-- End Container -->
+        <script>
+          var galleryImages = [];
+          var fileNames = [];
+          var imageList = [];
+          var image;
+          var openList;
+          var closeList = "</li>";
+
+          var openCaptionTag = "<p class='caption'>";
+          var closeCaptionTag = "</p>";
+
+          var openDescTag = "<p class = 'description' onclick='openInfoBox(";
+          var middleDescTag = ")'>"
+          var closeDescTag = "</p>";
+
+           //start of infobox data
+           var openInfoHeading;
+            var closeInfoHeading = "</p>";
+
+            var openInfoText;
+            var closeInfoText = "</p>";
+
+            document.getElementById("infoClose").innerHTML = "<p onclick='closeInfo()'>Click This to Close</p>";
+          //end of infobox data
+
+            var captionTexts = [];
+            captionTexts.push('Tesla Truck', 'How EV cars Work', 'Home Charging Kit', 'EV info','Rear Charging','Mercedes EV Prototype','Sporty EV','Solar Top','EV Roll','Front Chraging');
+
+            var descTexts = [];
+            descTexts.push('$100 deposit', 'Inner working', 'Must have', 'read me','differnet location', 'in the future','drving down the road', 'top up','its going to take awhile','alomost done');
+
+            var infoTexts = [
+            'Tesla was offerig the Cuber Truck for the public for a depost of $100. These consumers will be the first to get the Truck one they become avilable', 
+            'Many EV now use lituim ion batteries for their power source and the image shoes a general idea of how it works within the EV car', 
+            'An example of a Tesla brand charging station at home', 
+            'Many EV now use lituim ion batteries for their power source and the image shoes a general idea of how it works within the EV car',
+            'This is example of the location of a charging port for an EV car', 
+            'Thes is an example from Mercedes and they vision for the sporty EV car',
+            'The vision of some EV/Car company is to build many types of EVs for the public', 
+            'The earler introduction to EV cars many prototypes used Salor as a source of energy',
+            'In many place Ev cars line up to charge their cars',
+            'In many place Ev cars line up to charge their cars'
+            ];
+
+            for (var i=0; i<10; i++) {
+                fileNames.push("photo-"+(i+1));
+                galleryImages.push("<img src='images/EVcars/" + fileNames[i] + ".jpg'"+ "''>");
+                openList = "<li id='photo" + (i+1) + "''>";
+                  image = openList + openDescTag + i + middleDescTag + descTexts[i] + closeDescTag + galleryImages[i] + openCaptionTag + captionTexts[i] + closeCaptionTag + closeList;
+                
+                imageList.push(image);
+              }
+              function closeInfo() {
+                document.getElementById("infoBox").style.display = "none";
+            }
+
+            function openInfoBox(photoId) {
+                document.getElementById("infoBox").style.display = "block";
+                document.getElementById("infoText").innerHTML = infoTexts[photoId];
+                document.getElementById("infoHeading").innerHTML = captionTexts[photoId]; //set the heading of the infobox to the appropriate description
+            }
+       
+
+            document.getElementById("EVcars").innerHTML = imageList.join(" ");
+        </script>
+    </body>
+</html>

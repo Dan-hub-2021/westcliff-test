@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Calculator</title>
+<style>
+    div {
+        margin: 40px;
+    }
+</style>
+</head>
+<body>
+
+    <div>
+        <label>
+          Integer:
+          <input type="number" id="int-input" size="2">
+        </label>
+        <button id="int-button">Calculate</button>
+      </div>
+
+<div id="solution"></div>
+
+
+<script>
+
+ 
+  function integerNumber(num) {
+      var integerNumber = num;      
+      var num = !(num * (1/num*2/num))
+     
+      document.getElementById("solution").innerHTML = 'The result of the integer number ' + num + ' is ' + integerNumber;
+  }
+      
+  var integerButton = document.getElementById("int-button");
+  integerButton.addEventListener("click", function() {
+    var num = document.getElementById("int-input").value;
+    integerNumber(num);
+  });
+</script>
+
+
+  </body>
+
+  </html>
+
+  
