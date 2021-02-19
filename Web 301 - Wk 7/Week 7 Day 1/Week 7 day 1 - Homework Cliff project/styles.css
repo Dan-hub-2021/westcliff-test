@@ -1,0 +1,438 @@
+/* Header */
+header {
+    width: 100%;
+    min-height: 400px;
+    padding-top: 3em;
+}
+#home header {
+    background: no-repeat lightgrey url(images/cliff_ocean.jpg);
+    background-size: 1500px;
+}
+#activities header {
+    background: no-repeat lightgrey url(images/runfly.jpg);
+    background-size: 1500px;
+}
+#contact header {
+    background: no-repeat lightgrey url(images/cliff_rock.jpg);
+    background-size: 1500px;
+}
+#cliffs header{
+    background: no-repeat lightgrey url(images/forest_cliff.jpg);
+    background-size: 1500px;
+}
+.main-header {
+    background-color:rgb(255, 255, 255, 0.8);
+    width: 700px;
+    margin: 2em auto 0 auto;
+    min-height: 100px;
+    height: 100px;
+}
+.main-header .logo img {
+    width: 100px;
+    height: 100px;
+    margin: 0 2em 0 0;
+    float: left;
+}
+
+/* Navigation */
+.main-menu {
+    margin-left: 227px;
+    font-weight: 400;
+}
+.main-menu ul li {
+    list-style-type: none;
+    display: inline-block;
+    float: left;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-left: 1px solid rgba(202, 204, 202, 0.6);
+    line-height: 100px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.main-menu ul li a {
+    text-decoration: none;
+    color: #888;
+}
+.main-menu ul li a:hover {
+    color: #9ed034;
+}
+.main-menu ul li.active {
+    background: #9ed034;
+    border: none;
+}
+.main-menu ul li.active a {
+    color: #fff;
+}
+
+/* Main */
+main {
+    font-family: Arial, Helvetica, sans-serif;
+}
+main h2 {
+    color: #9ed034;
+    padding-left: 3.5em;
+}
+main h3 {   
+    padding-left: 4em;
+    font-weight: bold;
+}
+p{
+    padding-left: 5em;
+    font-weight: 5;
+
+}
+
+.index title {
+    color: #852B1B;
+    text-align: center;
+}
+/* Partners */
+section {
+    width: 100%;
+    background-color: #4288c3;
+}
+section #partners {
+    width: 1200px;
+    padding: 2em 0 2em 0;
+    margin: 0 auto;
+    text-align: center;
+}
+section #partners .partner {
+    display: inline-block;
+    margin: 0 0.75em;
+    padding: 1.3em 1.5em;
+    background-color: #fff;
+    border-radius: 50%;
+}
+section #partners .partner img {
+    width: 90px;
+    height: 90px;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    height: 155px;
+    padding-bottom: 1em;
+    background-color: #ecfab8;
+}
+footer #nondisclaimer .copy {
+    padding: 3.5em 3.5em 3.5em 13em;
+    float: left;
+    font-size: 0.9em;
+}
+footer #nondisclaimer .social {
+    padding: 2.5em;
+    margin-right: 9.25em;
+    float: right;
+}
+footer #disclaimer {
+    clear: both;
+}
+footer #disclaimer p {
+    font-size: 0.85em;
+    text-align: center;
+}
+footer #nondisclaimer .social .fa {
+    padding: 15px;
+    font-size: 15px;
+    width: 15px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 4px;
+    border-radius: 50%;
+}
+footer #nondisclaimer .social .fa:hover {
+    opacity: 0.7;
+}
+footer #nondisclaimer .social .fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+footer #nondisclaimer .social .fa-twitter{
+    background: #55ACEE;
+    color: white;
+}
+footer #nondisclaimer .social .fa-instagram{
+    background: #125688;
+    color: white;
+}
+
+/* Activities */
+table {
+    width: 1000px;
+    margin: 4em auto 0 auto;
+}
+caption {
+    background: #852B1B;
+    height: 40px;
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding-top: 1em;
+}
+thead {
+    background: #BDE1FF;
+}
+tbody {
+    background: #EEFFE6;
+    text-align: center;
+}
+th, td {
+    width: 225px;
+    height: 75px;
+    vertical-align: middle;
+    border: solid 1px #852B1B;
+}
+th:first-child {
+    width: 125px;
+    height: 50px;
+    background: #4977D1;
+    color: #fff;
+}
+td:first-child {
+    font-weight: bold;
+    background: #BDE1FF;
+}
+
+.selected {
+    background: #9ed034;
+    color: #fff;
+}
+
+td:not(.notAvailable):hover {
+    cursor: -webkit-grab;
+    cursor: pointer;
+}
+#activities main #displaySelected {
+    visibility: hidden;
+    margin: 0 auto;
+    width: 600px;
+    border: 2px solid #9ed034;
+    padding: 0.75em;
+}
+#activities main #displaySelected #result, #activities main #displaySelected #sendinfo {
+    display: inline-block;
+    margin:0;
+}
+#activities main #result {
+    min-height: 50px;
+    width: 300px;
+    padding: 0;
+}
+#activities main #result h4 {
+    margin-bottom:1em;
+    font-size:1.15em;
+}
+
+#activities main #displaySelected #sendinfo input[type="email"] {
+    width: 200px;
+}
+
+/* Contact */
+label {
+    font-weight: bold;      
+}
+
+.phone {
+    padding: 0.5em 0.5em 0.5em 5em;    
+}
+
+.email {
+    padding: 0.5em 0.5em 0.5em 5em;
+}
+
+span:first-child {
+    font-weight: bold;
+    padding: 0.5em 0.5em 0.5em 0em;
+}
+legend {
+    color: #4977D1;
+    text-transform: uppercase;
+    font-weight:bold;
+    padding: 0.5em 0.5em 0.5em 0em;
+}
+.textbox label, input{
+    display: block;
+    padding: 0.5em 0.5em 0.5em 0em;
+}
+.textbox input {
+    width: 500px;
+    
+}
+.radios label, input{
+    display:inline;
+    padding: 0.5em 0.5em 0.5em 0em;
+}
+.selectmenu label, select {
+    display: inline;
+    padding: 0.5em 0.5em 0.5em 0em;
+}
+.selectmenu select {
+    width: 150px;
+    text-align-last: center;    
+}
+
+.selectmenu option {
+    text-align: center;   
+    
+}
+.commentbox label, textarea {
+    display: block;
+    padding: 0.5em 0.5em 0.5em 0em;
+}
+.commentbox textarea {
+    width: 500px;
+    height: 150px;
+}
+
+form .button {
+    width: 49%;
+    text-align: right;    
+}
+form .button input {
+    width: 8em;
+    height: 2.5em;
+    font-size: 1.2em;
+    font-weight: bold;   
+    /*background-color: #4977D1;*/
+    color: #ffffff;
+    border: none;
+}
+form .button{
+    margin: 1.5em 0 1.5em 2em;
+    
+}
+
+/* cliff*/
+.sights {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 2000px;
+    padding: 5em;
+         
+  }
+  .sights li {
+    display: inline-block;
+    width: 650px;    
+    margin: 0 50px 100px 50px;
+  }
+  
+  .sights li img{
+    width: 100%; /* To make the images responsive */
+    height: auto;
+}
+figcaption {
+    background: #852B1B;
+    height: 40px;
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding-top: 1em;
+}
+
+/* Current Time */
+
+#timeofday{  
+    font-family: Arial, Helvetica, sans-serif;    
+    background-image: linear-gradient(0deg, rgba(251,215,139,1) 0%, rgba(118,213,245,1) 100%);    
+    text-align: center;
+    max-width: 1475px;
+    padding: 0.8em;
+    color:#3a3a3a;
+    
+}
+
+#clock{
+    color: #125688
+}
+
+#mySelect{
+    text-align: left;
+    color:#3a3a3a;
+    font: bold;
+
+}
+
+@media (min-width:600px) {
+    .description {
+      grid-template-columns: repeat(2, 1fr);
+    }
+   
+    .description {
+      max-width: 100%;
+      margin: 0 auto;
+      display: grid;
+      grid-gap: 1rem;
+    }
+
+    @media (min-width:900px) {
+     .partners {
+    grid-template-columns: repeat(6, 1fr);
+    }
+
+    @media (min-width:600px) {
+    .partners {
+     grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width:300px) {
+    .partners {
+    grid-template-columns: repeat(2, 1fr);
+    }
+     
+    .parters {
+    max-width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1rem;
+    }
+
+/* Home */
+
+
+
+/* ACTIVATE BELOW WHEN TESTING NAVIGATION AND OTHERS FOR RWD */
+
+/*Media Queries */
+@media (max-width: 768px) {
+    footer #nondisclaimer .copy {
+        padding: 3.5em 0em 3.5em 0em;
+        text-align: center;
+        float: none;
+        font-size: 0.9em;
+      }
+      footer #nondisclaimer .social {
+        padding: 2.5em 0;
+        margin: 0;
+        text-align: center;
+        float: none;
+      }
+}
+
+@media (max-width: 992px) {
+    .logo img {
+        position: relative;
+        bottom: 8px;
+    }
+    .main-menu {
+        width: 200px;
+        background-color:rgb(255, 255, 255);
+        position: absolute;
+        right: 1.7em;
+      }
+      .main-menu ul li {
+        border-bottom: 1px solid rgba(202, 204, 202, 0.6);
+      }
+      main {
+        padding: 3em 1em 3em 1em;
+        margin: 0;
+      }
+      #home .main-col-content {
+        padding: 25px;
+        min-height: 450px;
+        margin-top: 1em;
+      }
+} */
