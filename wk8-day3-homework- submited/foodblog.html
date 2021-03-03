@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Food Blog</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="#">Home Recipes Lifestyles Videos About</a>
+        <a href="#">News</a>
+        <a href="#">Contact</a>
+        <a href="#">About</a>
+      </div>
+
+
+    <aside id="leftside"></aside>
+    <aside id="rightside"></aside>
+    <div id="container">
+        <mycomponent1></mycomponent1>
+        
+        
+
+        <main>
+        
+            <aside id="photos">
+                <img src="images/chili.jpg" alt="White Chicken Chili" width="180">
+            </aside>
+            <mycomponent2></mycomponent2>
+
+            <section id="blogposts">
+
+               
+                <div class="post">
+                    <img v-on:click = "onClick" v-bind:src="image" width="35px" >      
+                    <span class="author">{{ obj1.author }}</span> — 
+                    <span class="date">{{ obj1.date }}</span>
+                    <span class="reply">{{ reply }}</span>
+                    <p>{{ obj1.comment }}</p>                               
+                </div>
+                <div class="post">
+                    <img v-on:click = "onClick" v-bind:src="image" width="35px">
+                    <span class="author">{{ obj2.author }}</span> — 
+                    <span class="date">{{ obj2.date }}</span>
+                    <span class="reply">{{ reply }}</span>
+                    <p>{{ obj2.comment }}</p>
+                </div>
+                <div class="post">
+                    <img v-on:click = "onClick" v-bind:src="image" width="35px">
+                    <span class="author">{{ obj3.author }}</span> — 
+                    <span class="date">{{ obj3.date }}</span>
+                    <span class="reply">{{ reply }}</span>
+                    <p>{{ obj3.comment }}</p>
+                </div>
+                <div class="post">
+                    <img v-on:click = "onClick" v-bind:src="image" width="35px">
+                    <span class="author">{{ obj4.author }}</span> — 
+                    <span class="date">{{ obj4.date }}</span>
+                    <span class="reply">{{ reply }}</span>
+                    <p>{{ obj4.comment }}</p>
+                </div>
+                
+            </section>
+
+        </main>
+
+        <footer>
+            &copy; Copyright FOOD BLOG
+        </footer>
+    
+    </div>
+
+    <script src="js/action.js"></script>
+   
+</body>
+</html>
